@@ -9,6 +9,7 @@ export const REG = {
 
 export const ALL_URLS = '<all_urls>';
 export const BLOCKING = 'blocking';
+export const TO_CANCEL = '<cancel>';
 export const REQUEST_HEADERS = 'requestHeaders';
 export const RESPONSE_HEADERS = 'responseHeaders';
 export const DEFAULT_CREDENTIALS_RESPONSE_HEADERS =

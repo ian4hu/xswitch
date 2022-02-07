@@ -9,6 +9,7 @@ import {
   DEFAULT_CREDENTIALS_RESPONSE_HEADERS,
   NULL_STRING,
   ACCESS_CONTROL_REQUEST_HEADERS,
+  TO_CANCEL,
 } from './constants';
 import { Enabled, UrlType } from './enums';
 
@@ -203,6 +204,9 @@ class Forward {
     }
 
     this._lastRequestId = details.requestId;
+    if (TO_CANCEL === redirectUrl) {
+      return { cancel: true };
+    }
     return redirectUrl === details.url ? {} : { redirectUrl };
   }
 
